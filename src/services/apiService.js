@@ -1,12 +1,18 @@
 export const HOST = 'http://localhost:8080';
 
+function getStoredToken(){
+  return sessionStorage.getItem("jwtToken") || localStorage.getItem('jwtToken');
+}
+
 export function createHeaders(auth) {
   const headers = {
     'Content-Type': 'application/json'
   };
 
-  if (auth?.accessToken) {
-    headers['Authorization'] = `${auth.tokenType || 'Bearer'} ${auth.accessToken}`;
+  const token = auth?.token || getStoredToken();
+
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
   }
 
   return headers;

@@ -19,8 +19,20 @@ jobs:
       - name: Setup Node.js 22.x
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: '18'
           cache: 'npm'
+
+      - name: Désactiver Nexus et forcer npm public
+        run: |
+          echo "registry=https://registry.npmjs.org/" > ~/.npmrc
+          echo "strict-ssl=false" >> ~/.npmrc
+          npm config list
+ 
+      - name: Supprimer éventuelles dépendances Nexus
+        run: rm -rf node_modules package-lock.json
+ 
+      - name: Installer les dépendances depuis npm public
+        run: npm install --no-cache --prefer-online
 
       - name: Install dependencies and build
         run: |

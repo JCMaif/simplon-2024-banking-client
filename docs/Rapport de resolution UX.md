@@ -213,6 +213,7 @@ import { jwtDecode } from "jwt-decode";
 - En cas de suppression d'un moyen de paiement, la liste n'est pas mise à jour
 - En cas d'absence de données à afficher (exemple page transaction), afficher un texte invitant l'utilisateur à en créer ou lui dire que la page n'a rien à afficher
 - Logout non mis en valeur
+- Page login : boutons collés, mise en page à améliorer
 
 #### Solution(s)
 * Empêcher l'accès à la section transaction si un moyen de paiement n'est pas enregistré

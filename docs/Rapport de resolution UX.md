@@ -212,12 +212,14 @@ import { jwtDecode } from "jwt-decode";
 - Un utilisateur doit créer une méthode de paiement avant de pouvoir enregistrer une transaction. Problème : il n'a aucun moyen de le savoir dans l'application
 - En cas de suppression d'un moyen de paiement, la liste n'est pas mise à jour
 - En cas d'absence de données à afficher (exemple page transaction), afficher un texte invitant l'utilisateur à en créer ou lui dire que la page n'a rien à afficher
+- Logout non mis en valeur
 
 #### Solution(s)
 * Empêcher l'accès à la section transaction si un moyen de paiement n'est pas enregistré
 * Orienter le parcours utilisateur en forçant la création du moyen de paiement si absent de la base
 * Permettre la création du moyen de paiement dans le formulaire de création de transaction
 * En cas d'absence de transaction, afficher un texte de bienvenue invitant à en créer une
+* Transformer le curseur au survol de la souris sur logout
 
 #### Résolution :
 Je choisis de permettre la création d'un moyen de paiement dans le formulaire de création de transaction.

@@ -88,7 +88,7 @@ export default function TransactionList() {
                 <h2>Transactions</h2>
                 <button className="fab-button" onClick={() => setShowNewForm(true)}>+</button>
             </div>
-
+            {transactions.length == 0 && <p>Créez votre première transaction</p>}
             {Object.entries(groupedTransactions).map(([date, transactions]) => (
                 <div key={date} className="date-group">
                     <h3>{date}</h3>

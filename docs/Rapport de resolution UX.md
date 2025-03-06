@@ -7,7 +7,7 @@
 * pas de token stocké, obligation de se reconnecter au refresh + proposer un rememberMe
 * gestion de l'utilisateur inconnu dans la base : proposer le register plutôt que le login
 * feedback : quand pas de transaction, pas de contenu
-* 
+  
 
 ### 0 - Sécurité
 * Utiliser https pour toute l'application (prod)
@@ -214,11 +214,13 @@ import { jwtDecode } from "jwt-decode";
 ### 2- Parcours utilisateur
 - Un utilisateur doit créer une méthode de paiement avant de pouvoir enregistrer une transaction. Problème : il n'a aucun moyen de le savoir dans l'application
 - En cas de suppression d'un moyen de paiement, la liste n'est pas mise à jour
+- En cas d'absence de données à afficher (exemple page transaction), afficher un texte invitant l'utilisateur à en créer ou lui dire que la page n'a rien à afficher
 
 #### Solution(s)
 * Empêcher l'accès à la section transaction si un moyen de paiement n'est pas enregistré
 * Orienter le parcours utilisateur en forçant la création du moyen de paiement si absent de la base
 * Permettre la création du moyen de paiement dans le formulaire de création de transaction
+* En cas d'absence de transaction, afficher un texte de bienvenue invitant à en créer une
 
 #### Résolution :
 Je choisis de permettre la création d'un moyen de paiement dans le formulaire de création de transaction.
@@ -236,7 +238,7 @@ Je choisis de permettre la création d'un moyen de paiement dans le formulaire d
 - les boutons de création sont peu visibles ou accessibles
 
 #### Résolution
-* Création d'un menu burger et media query pour les petits écrans
+* Création d'un menu burger et media query pour les petits écrans (ou autre mise en page de la nav bar)
 <details>
     - pas eu le temps, j'ai ajouté un media query pour supprimer le logo du site et empiler les liens :
 
@@ -282,8 +284,8 @@ Je choisis de permettre la création d'un moyen de paiement dans le formulaire d
 </details>
 
 ### Accessibilité et SEO
-- Ajuster les couleurs pour améliorer le contraste (page en cours, fond bleu clair, police bleu foncé)
-- Ajouter l'accès au clavier des éléments interactifs
+- Ajuster les couleurs pour améliorer le contraste (page en cours, fond bleu clair, police bleu foncé) ou utiliser des bordures plus contrastées pour détacher les éléments du fond
+- Ajouter l'accès au clavier des éléments interactifs (tabIndex)
 - Ajouter les attributs ARIA
 - Utiliser des balises html ayant du sens
 - Configurer les balises meta correctement

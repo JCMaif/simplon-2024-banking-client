@@ -287,7 +287,7 @@ Je choisis de permettre la création d'un moyen de paiement dans le formulaire d
 - Ajuster les couleurs pour améliorer le contraste (page en cours, fond bleu clair, police bleu foncé) ou utiliser des bordures plus contrastées pour détacher les éléments du fond
 - Ajouter l'accès au clavier des éléments interactifs (tabIndex)
 - Ajouter les attributs ARIA
-- Utiliser des balises html ayant du sens
+- Utiliser des balises html ayant du sens (au lieu des div partout)
 - Configurer les balises meta correctement
 - Ajouter un texte descriptif aux liens
 

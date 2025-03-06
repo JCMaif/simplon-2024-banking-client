@@ -290,6 +290,17 @@ Je choisis de permettre la création d'un moyen de paiement dans le formulaire d
 - Configurer les balises meta correctement
 - Ajouter un texte descriptif aux liens
 
+### Fonctionnalités
+- Manque de fonctionnalités
+  - Transactions : 
+    - données enregistrées mais non consultables (descriptions)
+    - pas de filtres (tri par date)
+    - pas d'affichage des catégories
+    - pas de possibilité de modifier ou supprimer
+  - Catégories :
+    - suppression / modification non implémentées (ou pas terminées)
+  - Moyen de paiement :
+    - en cas de suppression, pas de mise à jour de la liste
 
 ### Rapport Lighthouse
 - Optimiser le chargement des ressources critiques

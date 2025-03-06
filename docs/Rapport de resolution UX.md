@@ -17,7 +17,7 @@
  - Quand l'utilisateur est inconnu dans la base:
    - Il n'a pas de feedback quand il essaie de se connecter
 - Quand il y a un refresh, l'utilisateur doit se reconnecter
-- 
+  
 #### Solution(s) :
 * Afficher une erreur sur la page
 * Rediriger vers /register plutôt que /login

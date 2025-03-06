@@ -53,18 +53,21 @@ export default function Login() {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
-                <label htmlFor="rememberMe">Se souvenir de moi</label>
-                <input
-                    type="checkbox"
-                    name="rememberMe"
-                    checked={rememberMe}
-                    onChange={() => setRememberMe(!rememberMe)}
-                />
+                <div className="rememberMe">
+                    <label htmlFor="rememberMe">Se souvenir de moi</label>
+                    <input
+                        type="checkbox"
+                        name="rememberMe"
+                        id="rememberMe"
+                        checked={rememberMe}
+                        onChange={() => setRememberMe(!rememberMe)}
+                    />
+                </div>
                 <button type="submit" disabled={authLoading}>
                     {isLogin ? 'Login' : 'Register'}
                 </button>
             </form>
-            <button onClick={() => setIsLogin(!isLogin)} disabled={authLoading}>
+            <button className="button-register" onClick={() => setIsLogin(!isLogin)} disabled={authLoading}>
                 {isLogin ? 'Need to register?' : 'Already have an account?'}
             </button>
         </div>
